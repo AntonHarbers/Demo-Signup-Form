@@ -1,6 +1,6 @@
 :root{
-    --backgroundColor: black;
-    --primary: green;
+    --backgroundColor: rgb(132, 159, 255);
+    --primary: #1A1B22;
     --secondary: blue;
 
 }
@@ -12,4 +12,129 @@
 body{
     background-color: var(--backgroundColor);
     color: var(--primary);
+    font-family: 'Ysabeau SC', sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+img{
+    height: 40%;
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.right{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    background-color: var(--backgroundColor);
+}
+
+.left{
+    width: 40%;
+    height: 100%;
+    background-image: url(assets/background.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.logoContainer{
+    margin-top: 40%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--primary) ;
+    font-weight: 1000;
+    font-size: 2rem;   
+    animation: fadeIn 1s;
+    color: white;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+.text{
+    font-size: 1.5rem;
+    width: 60%;
+    text-align: center;
+}
+
+form{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    background-color: var(--backgroundColor);
+    height: 50%;
+}
+
+fieldset{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20%;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+}
+
+legend{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+input{
+    width: 30%;
+    border-radius: 2px;
+    outline: none;
+    border: 0px solid white;
+    padding: 2px;
+    font: 1.5rem;
+}
+label{
+    width: 50%;
+    font-size: 1.5rem;
+}
+
+button{
+    width: 25%;
+    background-color: var(--primary);
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+
+a:visited{
+    color: blue;
+}
+
+a:link{
+    color: white;
 }

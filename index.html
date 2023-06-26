@@ -5,13 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@1;100;200;300;400;500;600;700;800;900;1000&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <form action="">
-      <fieldset>
+    <div class="container">
+        <div class="left">
+            <div class="logoContainer">
+                <img src="assets/logo.png" alt="" />
+                SPACE-FOX
+            </div>
+        </div>
+        <div class="right"> 
+            <div class="text">
+                Welcome to Space-Fox, the fastest server in the world. Enjoy high speeds and comfortable API calls at a low cost with the ability to scale infinitely without worrying about the overhead. Log in to enjoy our services. Happy fox spacing 🦊
+            </div>
+            <form action="">
+                <fieldset>
+                    <legend>
+                        Lets do this!
+                    </legend>
+                    <div class="row">
+                        <label for="firstName">First Name</label>
+                        <input type="text" name="firstName" id="firstNameInput">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" name="lastName" id="lastNameInput">
+                    </div>
+                    <div class="row">
+                        <label for="email">EMAIL</label>
+                        <input type="email" name="email" id="emailInput">
+                        <label for="phone">EMAIL</label>
+                        <input type="number" name="phone" id="phoneInput">
+                    </div>
+                    <div class="row">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="passwordInput">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" name="confirmPassword" id="confirmPasswordInput">
+                    </div>
+                </fieldset>
+                <button>
+                    Create Account
+                </button>
+            </form>
+            <div class="signUpContainer">
+                <span>Already have an account? </span><a href="">Log In</a>
+            </div>
+        </div>
+    </div>
+    <!-- <form action=""> -->
+      <!-- <img src="assets/background.png" alt="" />
         <legend>Form</legend>
       </fieldset>
-    </form>
+    </form> -->
   </body>
   <script src="script.js"></script>
 </html>
