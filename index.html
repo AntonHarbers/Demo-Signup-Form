@@ -14,51 +14,86 @@
   </head>
   <body>
     <div class="container">
-        <div class="left">
-            <div class="logoContainer">
-                <img src="assets/logo.png" alt="" />
-                SPACE-FOX
-            </div>
+      <div class="left">
+        <div class="logoContainer">
+          <img src="assets/logo.png" alt="" />
+          SPACE-FOX
         </div>
-        <div class="right"> 
-            <div class="text">
-                Welcome to Space-Fox, the fastest server in the world. Enjoy high speeds and comfortable API calls at a low cost with the ability to scale infinitely without worrying about the overhead. Log in to enjoy our services. Happy fox spacing 🦊
-            </div>
-            <form action="">
-                <fieldset>
-                    <legend>
-                        Lets do this!
-                    </legend>
-                    <div class="row">
-                        <label for="firstName">First Name</label>
-                        <input type="text" name="firstName" id="firstNameInput">
-                        <label for="lastName">Last Name</label>
-                        <input type="text" name="lastName" id="lastNameInput">
-                    </div>
-                    <div class="row">
-                        <label for="email">EMAIL</label>
-                        <input type="email" name="email" id="emailInput">
-                        <label for="phone">EMAIL</label>
-                        <input type="number" name="phone" id="phoneInput">
-                    </div>
-                    <div class="row">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="passwordInput">
-                        <label for="confirmPassword">Confirm Password</label>
-                        <input type="password" name="confirmPassword" id="confirmPasswordInput">
-                    </div>
-                </fieldset>
-                <button>
-                    Create Account
-                </button>
-            </form>
-            <div class="signUpContainer">
-                <span>Already have an account? </span><a href="">Log In</a>
-            </div>
+      </div>
+      <div class="right">
+        <div class="text">
+          Welcome to Space-Fox, the <span class="highlight orange">fastest</span> server in the world. Enjoy high
+          speeds and comfortable API calls at a <span class="highlight lightBlue">low cost</span> with the ability to
+          scale <span class="highlight orange">infinitely</span> without worrying about the overhead. Log in to enjoy
+          our services. Happy <span class="highlight lightBlue">fox spacing</span> 🦊
         </div>
+        <form action="">
+          <fieldset>
+            <legend>Lets do this!</legend>
+            <div class="row">
+              <label for="firstNameInput">First Name</label>
+              <input
+                type="text"
+                name="firstName"
+                id="firstNameInput"
+                min="1"
+                max="15"
+                required
+              />
+              <label for="lastNameInput">Last Name</label>
+              <input
+                type="text"
+                name="lastName"
+                id="lastNameInput"
+                min="1"
+                max="15"
+                required
+              />
+            </div>
+            <div class="row">
+              <label for="emailInput">EMAIL</label>
+              <input
+                type="email"
+                name="email"
+                id="emailInput"
+                min="1"
+                max="20"
+                required
+              />
+              <label for="phoneInput">Phone Number</label>
+              <input type="number" name="phone" id="phoneInput" required />
+            </div>
+            <div class="row">
+              <label for="passwordInput">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="passwordInput"
+                min="5"
+                max="20"
+                required
+              />
+              <label for="confirmPasswordInput">Confirm Password</label>
+              <input
+                type="password"
+                name="confirmPassword"
+                id="confirmPasswordInput"
+                min="5"
+                max="20"
+                required
+              />
+            </div>
+          </fieldset>
+          <button id="submitBtn" type="submit">Create Account</button>
+          <h2 id="errorText" class="hidden">*Please make sure your password and confirmed passwords match!</h2>
+        </form>
+        <div class="signUpContainer">
+          <span>Already have an account? </span><a href="">Log In</a>
+        </div>
+      </div>
     </div>
     <!-- <form action=""> -->
-      <!-- <img src="assets/background.png" alt="" />
+    <!-- <img src="assets/background.png" alt="" />
         <legend>Form</legend>
       </fieldset>
     </form> -->
