@@ -1,25 +1,53 @@
+// Variable Declarations
 const passwordInput = document.querySelector('#passwordInput');
 const confirmPasswordInput = document.querySelector('#confirmPasswordInput');
 const submitButton = document.querySelector('#submitBtn');
 const errorText = document.querySelector('#errorText');
-
 const foxCursor = document.querySelector('.cursor');
 
+// Event Listeners
 document.addEventListener('mousemove', (e) => {
-  foxCursor.setAttribute(
-    'style',
-    'top: ' + (e.pageY - 10) + 'px; left: ' + (e.pageX - 10) + 'px;'
-  );
-
-  // if mouse moves out of screen then hide the cursor otherwise show it
-  if (e.pageX < 10 || e.pageY < 10) {
-    foxCursor.classList.add('hidden');
-  } else {
-    foxCursor.classList.remove('hidden');
-  }
+  UpdateCursorPosition(e.pageY, e.pageX);
 });
 
-// function that creates random shooting stars on the screen every random seconds
+document.addEventListener('mousedown', () => {
+  foxCursor.classList.add('expand');
+});
+
+document.addEventListener('mouseup', () => {
+  foxCursor.classList.remove('expand');
+});
+
+document.querySelector('form').addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent form submission
+  HandleFormSubmit();
+  event.target.submit();
+});
+
+// Helper Functions
+function HandleFormSubmit() {
+  var password = passwordInput.value;
+  var confirmPassword = confirmPasswordInput.value;
+
+  if (password !== confirmPassword) {
+    errorText.classList.remove('hidden');
+    return;
+  } else {
+    errorText.classList.add('hidden');
+  }
+}
+
+function UpdateCursorPosition(pageY, pageX) {
+  foxCursor.setAttribute(
+    'style',
+    'top: ' + (pageY - 10) + 'px; left: ' + (pageX - 10) + 'px;'
+  );
+
+  pageX < 10 || pageY < 10
+    ? foxCursor.classList.add('hidden')
+    : foxCursor.classList.remove('hidden');
+}
+
 function createStar() {
   const star = document.createElement('div');
   star.classList.add('star');
@@ -34,31 +62,3 @@ function createStar() {
 }
 
 setInterval(createStar, Math.random() * 5000);
-
-// mouse up
-
-document.addEventListener('mousedown', () => {
-  foxCursor.classList.add('expand');
-});
-
-document.addEventListener('mouseup', () => {
-  foxCursor.classList.remove('expand');
-});
-
-document.querySelector('form').addEventListener('submit', function (event) {
-  event.preventDefault(); // Prevent form submission
-
-  var password = passwordInput.value;
-  var confirmPassword = confirmPasswordInput.value;
-
-  console.log(password);
-  console.log(confirmPassword);
-
-  if (password !== confirmPassword) {
-    errorText.classList.remove('hidden');
-    return;
-  } else {
-    errorText.classList.add('hidden');
-  }
-  event.target.submit();
-});
