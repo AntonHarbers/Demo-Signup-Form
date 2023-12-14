@@ -2,7 +2,7 @@
 
 A Sign up form made using html, css and javascript for the odin project.
 
-[Live Link](https://antonharbers.github.io/Odin_Form/)
+[Live Link](https://antonharbers.github.io/Demo-Signup-Form/)
 
 ![Screenshot of the final Sign up Page](/assets/repoImage.png)
 
